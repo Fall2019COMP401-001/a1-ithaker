@@ -30,7 +30,7 @@ public class A1Novice {
 		double sum = calculateValueSum (checkout);
 
 		System.out.print(firstname.charAt(0) + ". " + lastname + ": ");
-		System.out.printf("%.2f", sum);
+		System.out.printf("%.2f\n", sum);
 
 		}
 		scan.close();
