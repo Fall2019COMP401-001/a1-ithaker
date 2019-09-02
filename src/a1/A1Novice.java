@@ -17,15 +17,15 @@ public class A1Novice {
 		for (int i=0; i<values.length; i++) {
 			var firstname = scan.next();
 			var lastname = scan.next();
-			int items = scan.nextInt();
-			int quant = scan.nextInt();
-			var food = scan.next();
-			int price = scan.nextInt();
-					
+			int items = scan.nextInt();		
 			int[] checkout = new int[items];
 		
-			for (int j=0; j<items; j++) {
+			for (int j=0; j<checkout.length; j++) {
+				int quant = scan.nextInt();
+				var food = scan.next();
+				int price = scan.nextInt();
 				checkout[j] = quant * price;
+				
 		}
 					
 		int sum = calculateValueSum(checkout);
