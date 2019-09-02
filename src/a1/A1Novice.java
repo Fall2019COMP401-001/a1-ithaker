@@ -29,7 +29,7 @@ public class A1Novice {
 						
 		double sum = calculateValueSum (checkout);
 
-		System.out.println(firstname.charAt(0) + ". " + lastname + ": "); 
+		System.out.print(firstname.charAt(0) + ". " + lastname + ": ");
 		System.out.printf("%.2f", sum);
 
 		}
