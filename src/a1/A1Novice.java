@@ -14,22 +14,25 @@ public class A1Novice {
 		// number of customers
 		int[] values = new int[customer];
 		
-		var firstname = scan.next();
-		var lastname = scan.next();
-		int items = scan.nextInt();
+		for (int i=0; i<values.length; i++) {
+			var firstname = scan.next();
+			var lastname = scan.next();
+			int items = scan.nextInt();
+			int quant = scan.nextInt();
+			var food = scan.next();
+			int price = scan.nextInt();
+					
+			int[] checkout = new int[items];
 		
-		for (int i=0; i<items; i++) {
-			values[i] = scan.nextInt();
+			for (int j=0; j<items; j++) {
+				checkout[j] = quant * price;
 		}
-		
-		scan.close();
-		
-		
-		int sum = calculateValueSum(values);
+					
+		int sum = calculateValueSum(checkout);
 
-		System.out.println(firstname + ". " + lastname.charAt(0) + ": " + sum);
+		System.out.println(firstname.charAt(0) + ". " + lastname + ": " + sum);
 
-	
+		}
 	}	
 static int calculateValueSum(int[] vals) {
 		
