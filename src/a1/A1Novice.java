@@ -23,20 +23,20 @@ public class A1Novice {
 			for (int j=0; j<checkout.length; j++) {
 				int quant = scan.nextInt();
 				var food = scan.next();
-				double price = scan.nextDouble();
-				checkout[j] = quant * price;
+				double price = scan.nextDouble() + 0.00;
+				checkout[j] = (quant * price) + 0.00;
 		}
 					
-		int sum = calculateValueSum (checkout);
+		double sum = calculateValueSum (checkout);
 
 		System.out.println(firstname.charAt(0) + ". " + lastname + ": " + sum);
 
 		}
 		scan.close();
 	}	
-static int calculateValueSum(double[] vals) {
+static double calculateValueSum(double[] vals) {
 		
-		int sum = 0;
+		double sum = 0.00;
 		
 		for (int i=0; i<vals.length; i++) {
 			sum += vals[i];
