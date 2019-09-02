@@ -3,7 +3,7 @@ package a1;
 import java.util.Scanner;
 
 public class A1Novice {
-
+	
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
@@ -26,10 +26,11 @@ public class A1Novice {
 				double price = scan.nextDouble() + 0.00;
 				checkout[j] = (quant * price) + 0.00;
 		}
-					
+						
 		double sum = calculateValueSum (checkout);
 
-		System.out.println(firstname.charAt(0) + ". " + lastname + ": " + sum);
+		System.out.println(firstname.charAt(0) + ". " + lastname + ": "); 
+		System.out.printf("%.2f", sum);
 
 		}
 		scan.close();
@@ -42,6 +43,6 @@ static double calculateValueSum(double[] vals) {
 			sum += vals[i];
 		}
 		
-		return sum;
+		return sum + 0.00;
 	}
 }
